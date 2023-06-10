@@ -1,0 +1,295 @@
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.navigation {
+  background: linear-gradient(to bottom, #000033, #1a237e);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.navigation-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  padding: 5px;
+}
+
+.mobile-menu-toggle span {
+  background-color: #fff;
+  height: 3px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -20%;
+    bottom: 0;
+    left: 0;
+    width: 70%;
+    height: 100vh;
+    background: linear-gradient(to right, rgba(0, 0, 51, 0.9), rgba(26, 35, 126, 0.9));
+  background-size: 200% 200%;
+  animation: gradient-animation 10s ease infinite;
+    padding: 10px 0;
+    border-right: 2px solid;
+    animation: border-animation 4s linear infinite;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+}
+
+body {
+  background: linear-gradient(to right, #1a237e, #000033);
+  background-size: 200% 200%;
+  animation: gradient-animation 10s ease infinite;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 20px;
+}
+
+
+/* animasi border */
+@keyframes border-animation {
+  0% {
+    border-color: #33ccff;
+  }
+  50% {
+    border-color: #0099ff;
+  }
+  100% {
+    border-color: #33ccff;
+  }
+}
+
+.border {
+  border-bottom: 2px solid;
+  animation: border-animation 4s linear infinite;
+}
+
+.pemutar, .container {
+  width: 100vw;
+  height: 100vh;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.upload {
+  width: 100%;
+  width: 200px;
+}
+
+.footer {
+      background: linear-gradient(to bottom, #000033, #1a237e);
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      height: 40px;
+      bottom: 0;
+      width: 100%;
+      
+    }
+
+    @media (max-width: 768px) {
+      .footer {
+        font-size: 14px;
+      }
+    }
+
+.navigation-bottom {
+      width: 100%;
+      background-color: #333;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      bottom: 80px;
+      color: #fff;
+      padding: 20px;
+      font-size: 25px;
+      background: linear-gradient(to bottom, #1a237e, #000033);
+      border-top: 2px solid;
+      animation: border-animation 4s linear infinite;
+    }
+
+.navigation-bottom-item {
+      flex-basis: 50%;
+      text-align: center;
+      color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+      .navigation-bottom {
+        display: none;
+      }
+
+      .floating-buttons {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+      }
+
+      .floating-button {
+        display: block;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        font-size: 24px;
+        text-align: center;
+        line-height: 60px;
+        cursor: pointer;
+      }
+      .footer {
+        background: linear-gradient(to bottom, #1a237e, #000033);
+        border-top: 2px solid;
+        animation: border-animation 4s linear infinite;
+      }
+      
+      .floating-button:hover {
+        background-color: #555;
+      }
+}
+
+
+
+
+.search-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.song-container {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.song-item {
+  margin-bottom: 10px;
+}
+
+.player-container {
+  position: relative;
+  padding-top: 200px;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#root {
+  margin: 120px 0 300px 0;
+  color: #ffffff;
+}
+
+button {
+  background: linear-gradient(to right, #1a237e, #000033);
+  border: none;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+input {
+  background: #000000;
+  border: none;
+  color: #ffffff;
+  border-radius: 12px;
+}
+
+input:focus {
+  outline: none;
+}
